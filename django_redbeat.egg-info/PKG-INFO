@@ -1,0 +1,43 @@
+Metadata-Version: 2.1
+Name: django-redbeat
+Version: 0.1
+Summary: A Django app to add dynamic celery redbeat periodic tasks
+Home-page: https://www.example.com/
+Author: Karim Bourahla
+Author-email: k.bourahla0x@gmail.com
+License: MIT license
+Classifier: Environment :: Web Environment
+Classifier: Framework :: Django
+Classifier: Framework :: Django :: 3.2
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Classifier: Topic :: Internet :: WWW/HTTP
+Classifier: Topic :: Internet :: WWW/HTTP :: Dynamic Content
+Requires-Python: >=3.6
+
+==============
+Django RedBeat
+==============
+
+django-redbeat is an app based on celery-redbeat with model based celery periodic tasks.
+
+Quick start
+-----------
+
+1. Add "django_redbeat" to your INSTALLED_APPS setting like this::
+
+    INSTALLED_APPS = [
+        ...
+        'django_redbeat',
+    ]
+
+
+2. Run ``python manage.py migrate`` to create the PeriodicTaskeEntry model.
+
+3. Start the development server and visit http://127.0.0.1:8000/admin/
+   to create a periodic task (you'll need the Admin app enabled).
+
+4. Visit http://127.0.0.1:8000/admin/django_redbeat/periodictasksentry/ to add periodic task.
