@@ -27,7 +27,7 @@ class PeriodicTasksEntry(models.Model):
 
     def get_entry(self):
         try:
-            entry = Entry.from_key(self.key, app=current_app())
+            entry = Entry.from_key(self.key, app=current_app)
             return entry
         except Exception as e:
             return None
@@ -50,7 +50,7 @@ class PeriodicTasksEntry(models.Model):
             entry.delete()
     
     def update_schedule(self, *args, **kwargs):
-        entry = Entry.from_key(self.key, app=current_app())
+        entry = Entry.from_key(self.key, app=current_app)
         entry.schedule = schedule(run_every=self.schedule)
         entry.save()
 
