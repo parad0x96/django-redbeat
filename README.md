@@ -1,7 +1,8 @@
 
 # Django RedBeat
 
-`django-redbeat` is an app based on celery-redbeat with model based celery periodic tasks.
+
+`django-redbeat` is an app based on [celery-redbeat](https://github.com/sibson/redbeat) with model based celery periodic tasks.
 
 Quick start
 -----------
